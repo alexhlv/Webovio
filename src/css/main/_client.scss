@@ -3,7 +3,7 @@
 .client {
     background: #fff;
     // box-shadow: 50px 50px 100px rgba(0, 0, 0, 0.145947);
-    @include shadow (50px, 50px);
+    @include shadow-block (50px, 50px);
     border-radius: 2px;
     position: absolute;
     bottom: -114px;

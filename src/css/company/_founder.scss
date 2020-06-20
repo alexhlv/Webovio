@@ -1,19 +1,21 @@
-
-
 .founder {
-    &__logo {
+    @include flex-container(flex-start, center);
+    padding-left: 40px;
+    padding-bottom: 60px;
 
+    &__logo {
+        @include shadow-logo;
     }
     
     &__info {
-
+        padding-left: 30px;
     }
     
     &__name {
-
+        @include text-title (22px, 33px, #4D533C, 0, 6px);
     }
     
     &__position {
-        
+        @include founder-position (16px, 24px, #152934, 0);
     }
 }

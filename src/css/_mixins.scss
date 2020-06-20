@@ -5,10 +5,10 @@ $container-width: 1110px;
     margin: 0 auto;
 }
 
-%no-decoration-link {
-    text-decoration: none;
+@mixin container($horisontal) {
+    max-width: $horisontal;
+    margin: 0 auto;
 }
-
 /* flex-items */
 
 @mixin flex-container($horisontal, $vertical) {
@@ -23,6 +23,8 @@ $container-width: 1110px;
     justify-content: $horisontal;
     align-items: $vertical;
 }
+
+/* content */
 
 @mixin text-label ($color) {
     font-size: 14px;
@@ -53,10 +55,6 @@ $container-width: 1110px;
     color: $color;
 }
 
-@mixin shadow ($horizontal, $vertical) {
-    box-shadow: $horizontal $vertical 100px rgba(0, 0, 0, 0.145947);
-}
-
 @mixin company-decription ($font-size, $line-height, $p-top, $p-right, $p-bottom, $p-left) {
     font-style: italic;
     font-size: $font-size;
@@ -66,4 +64,22 @@ $container-width: 1110px;
     padding-right: $p-right;
     padding-bottom: $p-bottom;
     padding-left: $p-left;
+}
+
+@mixin founder-position ($font-size, $line-height, $color, $p-bottom) {
+    font-size: $font-size;
+    line-height: $line-height;
+    color: $color;
+    padding-bottom: $p-bottom;
+}
+
+/* box-shadow */
+
+@mixin shadow-block ($horizontal, $vertical) {
+    box-shadow: $horizontal $vertical 100px rgba(0, 0, 0, 0.145947);
+}
+
+@mixin shadow-logo  {
+    box-shadow: 20px 25px 43px rgba(0, 0, 0, 0.18);
+    border-radius: 50%;
 }

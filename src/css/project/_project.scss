@@ -1,0 +1,29 @@
+.project {
+    @import '../mixins';
+    &__block {
+        position: relative;
+        // background-color: green;
+        @include container(976px);
+        @include flex-container(center, center);
+
+        &::after {
+            content: '';
+            display: block;
+            width: 1110px;
+            height: 1px;
+            background: rgba(33, 56, 66, 0.0955529);
+            position: absolute;
+            top: 0;
+            left: 70;
+       } 
+    }
+    
+    &__title {
+        @include text-title (36px, 54px, #4D533C, 150px, 110px);
+        padding-right: 133px;
+    }
+    
+    &__decription {
+        @include text-decription (rgba(33, 56, 66, 0.6), 0)
+    }
+}
