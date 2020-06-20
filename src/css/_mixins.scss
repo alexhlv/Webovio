@@ -23,3 +23,29 @@ $container-width: 1110px;
     justify-content: $horisontal;
     align-items: $vertical;
 }
+
+@mixin text-label ($color) {
+    font-size: 14px;
+    line-height: 21px;
+    color: $color;
+}
+
+@mixin text-title ($font-size, $line-height, $color) {
+    font-weight: bold;
+    font-size: $font-size;
+    line-height: $line-height;
+    color: $color;
+}
+
+@mixin text-decription ($color) {
+    font-size: 16px;
+    line-height: 26px;
+    color: $color;
+}
+
+@mixin text-link ($color) {
+    font-size: 16px;
+    line-height: 18px;
+    text-decoration-line: underline;
+    color: $color;
+}

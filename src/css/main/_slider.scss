@@ -1,26 +1,21 @@
+@import '../mixins';
+
 .slider {
-    $font-weight-bold: bold;
     $color-white: #fff;
+    $color-yellow: #FFD723;
 
     &__label {
-        font-size: 14px;
-        line-height: 21px;
-        color: $color-white;
+        @include text-label ($color-white);
     }
     
     &__title {
-        font-weight: $font-weight-bold;
-        font-size: 60px;
-        line-height: 74px;
-        color: $color-white;
+        @include text-title (60px, 74px, $color-white);
         padding-top: 22px;
         padding-bottom: 24px;
     }
     
     &__decription {
-        font-size: 16px;
-        line-height: 26px;
-        color: $color-white;
+        @include text-decription ($color-white);
         padding-bottom: 45px;
     }
 
@@ -29,9 +24,6 @@
     }
     
     &__link {
-        font-size: 16px;
-        line-height: 18px;
-        text-decoration-line: underline;
-        color: #FFD723;
+        @include text-link ($color-yellow);
     }
 }

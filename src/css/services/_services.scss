@@ -1,0 +1,32 @@
+@import '../mixins';
+
+.services {
+    @extend %container;
+
+    &__block {
+        padding-top: 244px;
+    }
+
+    &__label {
+        // @include text-label (rgba(77, 83, 60, 0.9));
+        font-size: 14px;
+        line-height: 21px;
+        color: rgba(77, 83, 60, 0.9);
+    }
+    
+    &__title {
+        @include text-title (36px, 46px, #4D533C);
+    }
+    
+    &__decription {
+        @include text-decription (rgba(33, 56, 66, 0.6));
+    }
+
+    // &__link-block {
+    //     padding-bottom: 210px;
+    // }
+    
+    &__link {
+        @include text-link (#D4D6D4);
+    }
+}

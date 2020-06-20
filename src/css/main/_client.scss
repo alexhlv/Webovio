@@ -3,18 +3,14 @@
     box-shadow: 50px 50px 100px rgba(0, 0, 0, 0.145947);
     border-radius: 2px;
     position: absolute;
-    // top: 0;
-    // left: 0;
-    bottom: 0;
+    bottom: -114px;
     right: 0;
 
     @import '../mixins';
 
     &__block {
         @include flex-container(space-between, center);
-        // padding-top: 60px;
-        // padding-bottom: 54px;
-        padding: 60px 165px 54px 65px;
+        padding: 60px 125px 54px 65px;
     }
 
     img + img {
