@@ -1,0 +1,37 @@
+.slider {
+    $font-weight-bold: bold;
+    $color-white: #fff;
+
+    &__label {
+        font-size: 14px;
+        line-height: 21px;
+        color: $color-white;
+    }
+    
+    &__title {
+        font-weight: $font-weight-bold;
+        font-size: 60px;
+        line-height: 74px;
+        color: $color-white;
+        padding-top: 22px;
+        padding-bottom: 24px;
+    }
+    
+    &__decription {
+        font-size: 16px;
+        line-height: 26px;
+        color: $color-white;
+        padding-bottom: 45px;
+    }
+
+    &__link-block {
+        padding-bottom: 210px;
+    }
+    
+    &__link {
+        font-size: 16px;
+        line-height: 18px;
+        text-decoration-line: underline;
+        color: #FFD723;
+    }
+}

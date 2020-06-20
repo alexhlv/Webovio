@@ -1,43 +1,25 @@
-// $container-width: 1100px;
+$container-width: 1110px;
 
-// %container {
-//     max-width: $container-width;
-//     margin: 0 auto;
-// }
+%container {
+    max-width: $container-width;
+    margin: 0 auto;
+}
 
-// %no-decoration-link {
-//     text-decoration: none;
-// }
+%no-decoration-link {
+    text-decoration: none;
+}
 
-// %text-center {
-//     text-align: center;
-// }
+/* flex-items */
 
-// %text-white {
-//     color: #fff;
-// }
+@mixin flex-container($horisontal, $vertical) {
+    display: flex;
+    justify-content: $horisontal;
+    align-items: $vertical;
+}
 
-// %betterdesk-advantages {
-//     font-size: 14px;
-//     line-height: 20px;
-// }
-
-// /* flex-items */
-
-// @mixin flex-container($horisontal, $vertical) {
-//     display: flex;
-//     justify-content: $horisontal;
-//     align-items: $vertical;
-// }
-
-// @mixin flex-container-column {
-//     display: flex;
-//     flex-direction: column;
-// }
-
-// @mixin padding-item($top, $bottom) {
-//     padding-top: $top;
-//     padding-right: 26px;
-//     padding-bottom: $bottom;
-//     padding-left: 33px;
-// }
+@mixin flex-container-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: $horisontal;
+    align-items: $vertical;
+}

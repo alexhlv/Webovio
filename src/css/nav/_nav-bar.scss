@@ -1,0 +1,15 @@
+@import '../mixins';
+
+.nav-bar {
+    @include flex-container(space-between, center);
+    padding-top: 24px;
+    padding-bottom: 121px;
+
+    &__burger-link {
+        @include flex-container(center, center);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #f5f6f7;
+    }
+}

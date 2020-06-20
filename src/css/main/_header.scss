@@ -1,4 +1,6 @@
-.main {
-    background-color: red;
-    color: green;
+@import '../nav/nav-bar';
+@import './slider';
+
+.header {
+    @extend %container;
 }
