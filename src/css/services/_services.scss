@@ -2,31 +2,32 @@
 
 .services {
     @extend %container;
+    @include flex-container(space-between, center);
 
     &__block {
         padding-top: 244px;
     }
 
     &__label {
-        // @include text-label (rgba(77, 83, 60, 0.9));
-        font-size: 14px;
-        line-height: 21px;
-        color: rgba(77, 83, 60, 0.9);
+        @include text-label (rgba(77, 83, 60, 0.9));
     }
     
     &__title {
-        @include text-title (36px, 46px, #4D533C);
+        @include text-title (36px, 46px, #4D533C, 29px, 35px);
     }
     
     &__decription {
-        @include text-decription (rgba(33, 56, 66, 0.6));
+        @include text-decription (rgba(33, 56, 66, 0.6), 42px);
     }
 
-    // &__link-block {
-    //     padding-bottom: 210px;
-    // }
+    &__link-block {
+        // padding-bottom: 210px;
+    }
     
     &__link {
         @include text-link (#D4D6D4);
     }
 }
+
+@import '../company/company';
+@import '../company/founder';

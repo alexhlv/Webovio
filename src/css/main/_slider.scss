@@ -9,14 +9,11 @@
     }
     
     &__title {
-        @include text-title (60px, 74px, $color-white);
-        padding-top: 22px;
-        padding-bottom: 24px;
+        @include text-title (60px, 74px, $color-white, 22px, 24px);
     }
     
     &__decription {
-        @include text-decription ($color-white);
-        padding-bottom: 45px;
+        @include text-decription ($color-white, 45px);
     }
 
     &__link-block {

@@ -1,12 +1,15 @@
+@import '../mixins';
+
 .client {
     background: #fff;
-    box-shadow: 50px 50px 100px rgba(0, 0, 0, 0.145947);
+    // box-shadow: 50px 50px 100px rgba(0, 0, 0, 0.145947);
+    @include shadow (50px, 50px);
     border-radius: 2px;
     position: absolute;
     bottom: -114px;
     right: 0;
 
-    @import '../mixins';
+    
 
     &__block {
         @include flex-container(space-between, center);

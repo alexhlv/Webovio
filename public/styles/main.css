@@ -129,17 +129,18 @@ body {
   text-decoration-line: underline;
   color: #FFD723; }
 
+.header, .services {
+  max-width: 1110px;
+  margin: 0 auto; }
+
+/* flex-items */
 .client {
   background: #fff;
   box-shadow: 50px 50px 100px rgba(0, 0, 0, 0.145947);
   border-radius: 2px;
   position: absolute;
   bottom: -114px;
-  right: 0;
-  /* flex-items */ }
-  .client .header, .client .services {
-    max-width: 1110px;
-    margin: 0 auto; }
+  right: 0; }
   .client__block {
     display: flex;
     justify-content: space-between;
@@ -153,25 +154,49 @@ body {
   margin: 0 auto; }
 
 /* flex-items */
-.services__block {
-  padding-top: 244px; }
-.services__label {
-  font-size: 14px;
-  line-height: 21px;
-  color: rgba(77, 83, 60, 0.9); }
-.services__title {
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 46px;
-  color: #4D533C; }
-.services__decription {
-  font-size: 16px;
-  line-height: 26px;
-  color: rgba(33, 56, 66, 0.6); }
-.services__link {
-  font-size: 16px;
-  line-height: 18px;
-  text-decoration-line: underline;
-  color: #D4D6D4; }
+.services {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .services__block {
+    padding-top: 244px; }
+  .services__label {
+    font-size: 14px;
+    line-height: 21px;
+    color: rgba(77, 83, 60, 0.9); }
+  .services__title {
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 46px;
+    color: #4D533C;
+    padding-top: 29px;
+    padding-bottom: 35px; }
+  .services__decription {
+    font-size: 16px;
+    line-height: 26px;
+    color: rgba(33, 56, 66, 0.6);
+    padding-bottom: 42px; }
+  .services__link {
+    font-size: 16px;
+    line-height: 18px;
+    text-decoration-line: underline;
+    color: #D4D6D4; }
+
+.header, .services {
+  max-width: 1110px;
+  margin: 0 auto; }
+
+/* flex-items */
+.company {
+  box-shadow: 0 100px 100px rgba(0, 0, 0, 0.145947); }
+  .company__decription {
+    font-style: italic;
+    font-size: 24px;
+    line-height: 40px;
+    color: #4D533C;
+    padding-top: 244px;
+    padding-right: 40px;
+    padding-bottom: 50px;
+    padding-left: 40px; }
 
 /*# sourceMappingURL=main.css.map */

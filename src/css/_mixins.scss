@@ -30,17 +30,20 @@ $container-width: 1110px;
     color: $color;
 }
 
-@mixin text-title ($font-size, $line-height, $color) {
+@mixin text-title ($font-size, $line-height, $color, $p-top, $p-bottom) {
     font-weight: bold;
     font-size: $font-size;
     line-height: $line-height;
     color: $color;
+    padding-top: $p-top;
+    padding-bottom: $p-bottom;
 }
 
-@mixin text-decription ($color) {
+@mixin text-decription ($color, $p-bottom) {
     font-size: 16px;
     line-height: 26px;
     color: $color;
+    padding-bottom: $p-bottom;
 }
 
 @mixin text-link ($color) {
@@ -48,4 +51,19 @@ $container-width: 1110px;
     line-height: 18px;
     text-decoration-line: underline;
     color: $color;
+}
+
+@mixin shadow ($horizontal, $vertical) {
+    box-shadow: $horizontal $vertical 100px rgba(0, 0, 0, 0.145947);
+}
+
+@mixin company-decription ($font-size, $line-height, $p-top, $p-right, $p-bottom, $p-left) {
+    font-style: italic;
+    font-size: $font-size;
+    line-height: $line-height;
+    color: #4D533C;
+    padding-top: $p-top;
+    padding-right: $p-right;
+    padding-bottom: $p-bottom;
+    padding-left: $p-left;
 }

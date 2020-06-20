@@ -1,0 +1,9 @@
+@import '../mixins';
+
+.company {
+    @include shadow (0, 100px);
+
+    &__decription {
+        @include company-decription (24px, 40px, 244px, 40px, 50px, 40px);
+    }
+}
