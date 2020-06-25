@@ -5,10 +5,23 @@ $container-width: 1110px;
     margin: 0 auto;
 }
 
+/* flex-items */
+
+@mixin bgimage($size, $horisontal, $vertical) {
+    background: {
+        size: $size, cover;
+        repeat: no-repeat;
+        position: $horisontal $vertical;
+    }
+}
+
+/* container */
+
 @mixin container($horisontal) {
     max-width: $horisontal;
     margin: 0 auto;
 }
+
 /* flex-items */
 
 @mixin flex-container($horisontal, $vertical) {
