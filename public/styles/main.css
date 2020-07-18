@@ -709,10 +709,11 @@ body {
     color: #FFFFFF;
     padding-top: 23px;
     padding-bottom: 24px; }
-  .footer .social__icons-block {
+  .footer .social__icon-block {
     display: flex;
     justify-content: space-between;
-    align-items: center; }
+    align-items: center;
+    max-width: 200px; }
   .footer .social__item:not(:last-of-type) {
     margin-right: 10px; }
   .footer .social__link {

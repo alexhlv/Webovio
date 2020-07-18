@@ -83,8 +83,9 @@
             @include text-title(24px, 38px, #FFFFFF, 23px, 24px);
         }
         
-        &__icons-block {
+        &__icon-block {
             @include flex-container(space-between, center);
+            max-width: 200px;
         }       
         
         &__item:not(:last-of-type) {
