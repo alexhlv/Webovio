@@ -8,7 +8,7 @@
     }
 
     &::after {
-        @include project-before-after(120px, -180px);
+        @include project-before-after(2600px, 120px);
    }
 
     &__block {

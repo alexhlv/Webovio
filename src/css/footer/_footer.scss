@@ -1,8 +1,7 @@
 @import '../mixins';
 
 .footer {
-    width: 1440px;
-    height: 920px;
+
     background-color: #4F553D;
     @include background-image('../../public/images/bg-footer.jpg', left);
     @include padding(120px, 164px, 30px, 165px);
@@ -28,20 +27,13 @@
 
     &__block-nav {
         @include flex-container(space-between, flex-start);
-        position: relative;
-
-        &::before {
-            @include footer-nav-before-after(0px, 0px);
-        }
-
-        &::after {
-            @include footer-nav-before-after(370px, 0px);
-        }
+        @include border-top-bottom;
     }
     
     .nav {
         @include flex-container(space-between, flex-start);
-        // @include footer-nav-before(0, 0);
+        @include border-right;
+        @include margin(60px, 0, 60px, 0);
 
         &__block {
              
@@ -55,12 +47,12 @@
             }
 
             &_third {
-                @include padding(0, 13px, 0, 0);
+                @include padding(0, 80px, 0, 0);
             }
         }
         
         &__title {
-            @include nav-title(60px, 21px);
+            @include footer-title;
         }
         
         &__list {
@@ -77,6 +69,7 @@
     }
 
     .social {
+
         &__title {
             @include nav-title(60px, 21px);
         }
@@ -90,29 +83,52 @@
             @include text-title(24px, 38px, #FFFFFF, 23px, 24px);
         }
         
-        &__icons {
-            @include flex-container(space-between, flex-start);
+        &__icons-block {
+            @include flex-container(space-between, center);
         }       
         
-        &__link {
-            // display: block;
+        &__item:not(:last-of-type) {
+           margin-right: 10px;
         }
-        
-        &__img {
 
+        &__link {
+            width: 33px;
+            height: 33px;
+            @include flex-container(center, center);
+            background-color: #444A34;;
+            border-radius: 50%;
+            transition: all .3s;
+
+            &:hover {
+                background-color: #FFD723;
+            }
         }
+      
+        & svg {
+            width: 15px;
+            color: #5E6648;
+            transition: all .3s;
+
+            & .big{
+                width: 25px;
+            }
+
+            &:hover {
+                color: #FFFFFF;
+            }
+        }   
     }
 
-    // &__copyright {
-    //     @include margin(30px, 0, 0, 0);
-    //     @include flex-container(space-between, center);
-    // }
+    &__copyright {
+        @include margin(30px, 0, 0, 0);
+        @include flex-container(space-between, center);
+    }
     
-    // .logo {
+    .logo {
 
-    // }
+    }
     
-    // &__copyright-text {
-    //     @include copyright-text;
-    // }
+    &__copyright-text {
+        @include copyright-text;
+    }
 }

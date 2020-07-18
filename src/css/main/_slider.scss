@@ -22,6 +22,12 @@
     
     &__link {
         @include text-link ($color-yellow);
+
+        & svg {
+            width: 5px;
+            color: #FFD723;
+            transition: all .3s;
+        }
     }
 }
 

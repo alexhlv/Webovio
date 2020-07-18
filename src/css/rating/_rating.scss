@@ -31,6 +31,16 @@
     &__link {
         @include rating-link;
 
+        & svg {
+            width: 5px;
+            color: #D4D6D4;
+            transition: all .3s;
+
+            &:hover {
+                @include yellow-hover;
+            }
+        }
+
         &:hover {
             @include yellow-hover;
         }

@@ -47,29 +47,16 @@ $container-width: 1110px;
     left: $left;
 }
 
-@mixin footer-nav-before-after($top, $left) {
-    content: '';
-    display: block;
-    width: 1110px;
-    height: 1px;
-    background: #5D6544;
-    position: absolute;
-    top: $top;
-    left: $left;
+@mixin border-top-bottom {
+    border-top: 1px solid #5D6544;
+    border-bottom: 1px solid #5D6544;
+}
+
+@mixin border-right {
+    border-right: 1px solid #5D6544;
 }
 
 @mixin footer-nav-before($top, $left) {
-    content: '';
-    display: block;
-    width: 1px;
-    height: 210px;
-    background: #5D6544;
-    position: absolute;
-    top: $top;
-    left: $left;
-}
-
-@mixin footer-nav-icon($top, $left) {
     content: '';
     display: block;
     width: 1px;
@@ -160,6 +147,16 @@ $container-width: 1110px;
     color: #FFFFFF;
     padding-top: $p-top;
     padding-bottom: $p-bottom;
+}
+
+@mixin footer-title {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 38px;
+    text-transform: uppercase;
+    color: #FFFFFF;
 }
 
 @mixin text-decription($color, $p-bottom) {

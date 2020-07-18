@@ -72,6 +72,12 @@
     
     &__link {
         @include text-link (#D4D6D4);
+
+        & svg {
+            width: 5px;
+            color: #D4D6D4;
+            transition: all .3s;
+        }
     }
 }
 
