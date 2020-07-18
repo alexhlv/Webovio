@@ -273,13 +273,17 @@ body {
     color: #152934;
     padding-bottom: 0; }
 
+.header, .services, .rating {
+  max-width: 1110px;
+  margin: 0 auto; }
+
+/* background-image */
+/* container */
+/* flex-items */
+/* content */
+/* box-shadow */
 .project {
-  position: relative;
-  /* background-image */
-  /* container */
-  /* flex-items */
-  /* content */
-  /* box-shadow */ }
+  position: relative; }
   .project::before {
     content: '';
     display: block;
@@ -296,11 +300,8 @@ body {
     height: 1px;
     background: rgba(33, 56, 66, 0.0955529);
     position: absolute;
-    left: 120px;
-    bottom: -180px; }
-  .project .header, .project .services, .project .rating {
-    max-width: 1110px;
-    margin: 0 auto; }
+    top: 120px;
+    left: -180px; }
   .project__block {
     position: relative;
     max-width: 976px;
@@ -571,6 +572,134 @@ body {
   background-color: #4F553D;
   background-image: url("../../public/images/bg-footer.jpg");
   background-repeat: space;
-  background-position: left; }
+  background-position: left;
+  padding-top: 120px;
+  padding-right: 164px;
+  padding-bottom: 30px;
+  padding-left: 165px; }
+  .footer__contacts {
+    max-width: 470px;
+    min-height: 88px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 185px;
+    margin-right: 0;
+    margin-bottom: 40px;
+    margin-left: 0; }
+  .footer__contacts-block {
+    padding-top: 0;
+    padding-right: 68px;
+    padding-bottom: 0;
+    padding-left: 0; }
+  .footer__title {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 40px;
+    color: #B6C197; }
+  .footer__text {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 40px;
+    color: #FFFFFF; }
+  .footer__block-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative; }
+    .footer__block-nav::before {
+      content: '';
+      display: block;
+      width: 1110px;
+      height: 1px;
+      background: #5D6544;
+      position: absolute;
+      top: 0px;
+      left: 0px; }
+    .footer__block-nav::after {
+      content: '';
+      display: block;
+      width: 1110px;
+      height: 1px;
+      background: #5D6544;
+      position: absolute;
+      top: 370px;
+      left: 0px; }
+  .footer .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; }
+    .footer .nav__block_first {
+      padding-top: 0;
+      padding-right: 70px;
+      padding-bottom: 0;
+      padding-left: 0; }
+    .footer .nav__block_second {
+      padding-top: 0;
+      padding-right: 100px;
+      padding-bottom: 0;
+      padding-left: 0; }
+    .footer .nav__block_third {
+      padding-top: 0;
+      padding-right: 13px;
+      padding-bottom: 0;
+      padding-left: 0; }
+    .footer .nav__title {
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 38px;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      padding-top: 60px;
+      padding-bottom: 21px; }
+    .footer .nav__list {
+      padding-top: 0;
+      padding-right: 0;
+      padding-bottom: 60px;
+      padding-left: 0; }
+    .footer .nav__list-item {
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 40px; }
+    .footer .nav__link {
+      color: #B6C197; }
+  .footer .social__title {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 38px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    padding-top: 60px;
+    padding-bottom: 21px; }
+  .footer .social__text {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 40px;
+    color: #B6C197; }
+  .footer .social__e-mail {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 38px;
+    color: #FFFFFF;
+    padding-top: 23px;
+    padding-bottom: 24px; }
+  .footer .social__icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; }
 
 /*# sourceMappingURL=main.css.map */

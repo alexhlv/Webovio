@@ -7,14 +7,11 @@ $container-width: 1110px;
 
 /* background-image */
 
-// @mixin bgimage($size, $horisontal, $vertical) {
-//     background: {
-//         size: $size, cover;
-//         repeat: no-repeat;
-//         position: $horisontal $vertical;
-//     }
-// }
-
+@mixin background-image($url, $position) {
+    background-image: url($url);
+    background-repeat: space;
+    background-position: $position;
+}
 /* container */
 
 @mixin container($horisontal) {
@@ -27,12 +24,6 @@ $container-width: 1110px;
     height: $height;
 }
 
-@mixin background-image($url, $position) {
-    background-image: url($url);
-    background-repeat: space;
-    background-position: $position;
-}
-
 @mixin position-top-right($top, $right) {
     position: absolute;
     top: $top;
@@ -42,6 +33,50 @@ $container-width: 1110px;
 @mixin position-bottom-left($bottom, $left) {
     position: absolute;
     bottom: $bottom;
+    left: $left;
+}
+
+@mixin project-before-after($top, $left) {
+    content: '';
+    display: block;
+    width: 1110px;
+    height: 1px;
+    background: rgba(33, 56, 66, 0.0955529);
+    position: absolute;
+    top: $top;
+    left: $left;
+}
+
+@mixin footer-nav-before-after($top, $left) {
+    content: '';
+    display: block;
+    width: 1110px;
+    height: 1px;
+    background: #5D6544;
+    position: absolute;
+    top: $top;
+    left: $left;
+}
+
+@mixin footer-nav-before($top, $left) {
+    content: '';
+    display: block;
+    width: 1px;
+    height: 210px;
+    background: #5D6544;
+    position: absolute;
+    top: $top;
+    left: $left;
+}
+
+@mixin footer-nav-icon($top, $left) {
+    content: '';
+    display: block;
+    width: 1px;
+    height: 210px;
+    background: #5D6544;
+    position: absolute;
+    top: $top;
     left: $left;
 }
 
@@ -76,7 +111,7 @@ $container-width: 1110px;
 
 /* content */
 
-@mixin text-label ($color) {
+@mixin text-label($color) {
     font-family: Poppins;
     font-style: normal;
     font-weight: normal;
@@ -85,7 +120,7 @@ $container-width: 1110px;
     color: $color;
 }
 
-@mixin text-title ($font-size, $line-height, $color, $p-top, $p-bottom) {
+@mixin text-title($font-size, $line-height, $color, $p-top, $p-bottom) {
     font-family: Poppins;
     font-style: normal;
     font-weight: bold;
@@ -106,7 +141,28 @@ $container-width: 1110px;
     text-transform: uppercase;
 }
 
-@mixin text-decription ($color, $p-bottom) {
+@mixin contacts-title {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 40px;
+    color: #B6C197;
+}
+
+@mixin nav-title($p-top, $p-bottom) {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 38px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    padding-top: $p-top;
+    padding-bottom: $p-bottom;
+}
+
+@mixin text-decription($color, $p-bottom) {
     font-family: Poppins;
     font-style: normal;
     font-weight: normal;
@@ -127,6 +183,23 @@ $container-width: 1110px;
     padding-bottom: 56px;
 }
 
+@mixin nav-decription {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 40px;
+}
+
+@mixin contacts-text {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 40px;
+    color: #FFFFFF;
+}
+
 @mixin text-link ($color) {
     font-family: Poppins;
     font-style: normal;
@@ -135,6 +208,15 @@ $container-width: 1110px;
     line-height: 18px;
     text-decoration-line: underline;
     color: $color;
+}
+
+@mixin copyright-text {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 21px;
+    color: #B5C096;
 }
 
 @mixin rating-link {
@@ -147,13 +229,17 @@ $container-width: 1110px;
     color: #D4D6D4;
 }
 
+@mixin nav-link {
+    color: #B6C197;
+}
+
 @mixin yellow-hover {
     color: #FFD723;
 }
 
 
 
-@mixin company-decription ($font-size, $line-height, $p-top, $p-right, $p-bottom, $p-left) {
+@mixin company-decription($font-size, $line-height, $p-top, $p-right, $p-bottom, $p-left) {
     font-family: Poppins;
     font-style: italic;
     font-weight: normal;
@@ -166,7 +252,7 @@ $container-width: 1110px;
     padding-left: $p-left;
 }
 
-@mixin founder-position ($font-size, $line-height, $color, $p-bottom) {
+@mixin founder-position($font-size, $line-height, $color, $p-bottom) {
     font-family: Poppins;
     font-style: normal;
     font-weight: normal;
@@ -178,7 +264,7 @@ $container-width: 1110px;
 
 /* box-shadow */
 
-@mixin shadow-block ($horizontal, $vertical) {
+@mixin shadow-block($horizontal, $vertical) {
     box-shadow: $horizontal $vertical 100px rgba(0, 0, 0, 0.145947);
 }
 

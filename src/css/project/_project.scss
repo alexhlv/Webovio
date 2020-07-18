@@ -1,32 +1,18 @@
+@import '../mixins';
+
 .project {
     position: relative;
 
     &::before {
-        content: '';
-        display: block;
-        width: 1110px;
-        height: 1px;
-        background: rgba(33, 56, 66, 0.0955529);
-        position: absolute;
-        top: 0;
-        left: 120px;
+        @include project-before-after(0, 120px);
     }
 
     &::after {
-        content: '';
-        display: block;
-        width: 1110px;
-        height: 1px;
-        background: rgba(33, 56, 66, 0.0955529);
-        position: absolute;
-        left: 120px;
-        bottom: -180px;
+        @include project-before-after(120px, -180px);
    }
 
-    @import '../mixins';
     &__block {
         position: relative;
-        // background-color: green;
         @include container(976px);
         @include flex-container(center, center);   
     }

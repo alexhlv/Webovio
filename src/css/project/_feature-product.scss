@@ -58,7 +58,7 @@
         @include margin(0, 100px, 0, 0);
 
         &_reverse {
-            @include margin(0, 0, 0, 172px); // Підкорегувати
+            @include margin(0, 0, 0, 172px);
         }
     }
     

@@ -5,4 +5,114 @@
     height: 920px;
     background-color: #4F553D;
     @include background-image('../../public/images/bg-footer.jpg', left);
+    @include padding(120px, 164px, 30px, 165px);
+
+    &__contacts {
+        max-width: 470px;
+        min-height: 88px;
+        @include flex-container(flex-start, flex-start);
+        @include margin(185px, 0, 40px, 0);
+    }
+    
+    &__contacts-block {
+        @include padding(0, 68px, 0, 0);
+    }
+    
+    &__title {
+        @include contacts-title;
+    }
+    
+    &__text {
+        @include contacts-text;
+    }
+
+    &__block-nav {
+        @include flex-container(space-between, flex-start);
+        position: relative;
+
+        &::before {
+            @include footer-nav-before-after(0px, 0px);
+        }
+
+        &::after {
+            @include footer-nav-before-after(370px, 0px);
+        }
+    }
+    
+    .nav {
+        @include flex-container(space-between, flex-start);
+        // @include footer-nav-before(0, 0);
+
+        &__block {
+             
+
+            &_first {
+                @include padding(0, 70px, 0, 0);
+            }
+
+            &_second {
+                @include padding(0, 100px, 0, 0);
+            }
+
+            &_third {
+                @include padding(0, 13px, 0, 0);
+            }
+        }
+        
+        &__title {
+            @include nav-title(60px, 21px);
+        }
+        
+        &__list {
+            @include padding(0, 0, 60px, 0);
+        }
+        
+        &__list-item {
+            @include nav-decription;
+        }
+        
+        &__link {
+            @include nav-link;
+        }
+    }
+
+    .social {
+        &__title {
+            @include nav-title(60px, 21px);
+        }
+        
+        &__text {
+            @include nav-decription;
+            color: #B6C197;
+        }
+        
+        &__e-mail {
+            @include text-title(24px, 38px, #FFFFFF, 23px, 24px);
+        }
+        
+        &__icons {
+            @include flex-container(space-between, flex-start);
+        }       
+        
+        &__link {
+            // display: block;
+        }
+        
+        &__img {
+
+        }
+    }
+
+    // &__copyright {
+    //     @include margin(30px, 0, 0, 0);
+    //     @include flex-container(space-between, center);
+    // }
+    
+    // .logo {
+
+    // }
+    
+    // &__copyright-text {
+    //     @include copyright-text;
+    // }
 }
