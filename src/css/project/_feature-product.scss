@@ -1,9 +1,84 @@
+@import '../mixins';
 
 .feature-product {
-    @import '../mixins';
-    // &__image {
-    //     background: {
-    //         image: url(../../../public/images/bg-feature-product-1.jpg);
-    //         // @include bgimage (453px, top, left);
-    // }
+    @include flex-container(space-between, center);
+
+    &__image {
+        @include background-image('../../public/images/bg-feature-product-1.jpg', left);  
+        @include size(775px, 615px);
+
+        &_reverse {
+            @include margin(0, -40px, 0, 0);
+            @include background-image('../../public/images/bg-feature-product-2.jpg', left); 
+        }
+
+        &_another {
+            @include background-image('../../public/images/bg-feature-product-3.jpg', left); 
+        }
+    }
+
+    &__company {
+        @include shadow-block(50px, 50px);
+        @include size(453px, 243px);  
+        background-color: #fff;
+        border-radius: 8px;
+        @include margin(400px, 0, 0, 320px);
+
+        &_reverse {
+            @include margin(375px, 0, 0, -40px);
+        }
+    }
+    
+    &__company-decription {
+        @include company-decription (16px, 26px, 30px, 33px, 24px, 30px);
+    }
+    
+    &__founder {
+        @include flex-container(flex-start, center);
+        @include padding(0, 0, 40px, 30px);
+    } 
+
+    &__logo {
+        @include shadow-logo;
+    }
+    
+    &__info {
+        padding-left: 30px;
+    }
+    
+    &__name {
+        @include text-title (16px, 24px, #4D533C, 0, 6px);
+    }
+    
+    &__position {
+        @include founder-position (14px, 21px, #152934, 0);
+    }
+    
+    &__block {
+        @include margin(0, 100px, 0, 0);
+
+        &_reverse {
+            @include margin(0, 0, 0, 172px); // Підкорегувати
+        }
+    }
+    
+    &__title {
+        @include text-title (36px, 48px, #4D533C, 29px, 35px);
+    }
+    
+    &__text-decription {
+        @include text-decription (rgba(33, 56, 66, 0.6), 30px);
+    }
+    
+    &__link {
+        @include text-link (#D4D6D4);
+    }
 }
+
+.feature-product:not(:last-child) {
+    margin-bottom: 100px;
+}
+
+// .feature-product_reverse {
+    
+// }

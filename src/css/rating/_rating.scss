@@ -1,0 +1,42 @@
+@import '../mixins';
+
+.rating {
+    position: relative;
+    @extend %container;
+    @include padding(150px, 0, 150px, 0);
+    
+    &__header {
+        @include text-title(36px, 48px, #4D533C, 29px, 35px);
+        @include padding(150px, 0, 60px, 0);
+    }
+    
+    &__block {
+        @include flex-container(space-between, stretch);
+    }
+    
+    &__item {
+        align-self: stretch;
+        @include padding(27px, 31px, 36px, 30px);
+        
+    }
+    
+    &__title {
+        @include rating-title;
+    }
+    
+    &__text-decription {
+        @include rating-decription;
+    }
+    
+    &__link {
+        @include rating-link;
+
+        &:hover {
+            @include yellow-hover;
+        }
+    }
+
+    // &__link:hover {
+    //     color: #FFD723;
+    // }
+}

@@ -1,0 +1,8 @@
+@import '../mixins';
+
+.footer {
+    width: 1440px;
+    height: 920px;
+    background-color: #4F553D;
+    @include background-image('../../public/images/bg-footer.jpg', left);
+}

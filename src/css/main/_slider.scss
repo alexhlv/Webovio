@@ -24,3 +24,22 @@
         @include text-link ($color-yellow);
     }
 }
+
+// .link__image {
+
+//     &_yellow {
+//         display: block;
+
+//         &:hover {
+//             display: none;
+//         }
+//     }
+
+//     &_grey {
+//         display: none;
+
+//         &:hover {
+//             display: block;
+//         }
+//     }
+// }

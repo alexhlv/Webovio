@@ -5,21 +5,44 @@ $container-width: 1110px;
     margin: 0 auto;
 }
 
-/* flex-items */
+/* background-image */
 
-@mixin bgimage($size, $horisontal, $vertical) {
-    background: {
-        size: $size, cover;
-        repeat: no-repeat;
-        position: $horisontal $vertical;
-    }
-}
+// @mixin bgimage($size, $horisontal, $vertical) {
+//     background: {
+//         size: $size, cover;
+//         repeat: no-repeat;
+//         position: $horisontal $vertical;
+//     }
+// }
 
 /* container */
 
 @mixin container($horisontal) {
     max-width: $horisontal;
     margin: 0 auto;
+}
+
+@mixin size($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin background-image($url, $position) {
+    background-image: url($url);
+    background-repeat: space;
+    background-position: $position;
+}
+
+@mixin position-top-right($top, $right) {
+    position: absolute;
+    top: $top;
+    right: $right;
+}
+
+@mixin position-bottom-left($bottom, $left) {
+    position: absolute;
+    bottom: $bottom;
+    left: $left;
 }
 
 /* flex-items */
@@ -37,15 +60,34 @@ $container-width: 1110px;
     align-items: $vertical;
 }
 
+@mixin margin($m-top, $m-right, $m-bottom, $m-left) {
+    margin-top: $m-top;
+    margin-right: $m-right;
+    margin-bottom: $m-bottom;
+    margin-left: $m-left;
+}
+
+@mixin padding($p-top, $p-right, $p-bottom, $p-left) {
+    padding-top: $p-top;
+    padding-right: $p-right;
+    padding-bottom: $p-bottom;
+    padding-left: $p-left;
+}
+
 /* content */
 
 @mixin text-label ($color) {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
     font-size: 14px;
     line-height: 21px;
     color: $color;
 }
 
 @mixin text-title ($font-size, $line-height, $color, $p-top, $p-bottom) {
+    font-family: Poppins;
+    font-style: normal;
     font-weight: bold;
     font-size: $font-size;
     line-height: $line-height;
@@ -54,22 +96,67 @@ $container-width: 1110px;
     padding-bottom: $p-bottom;
 }
 
+@mixin rating-title {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 34px;
+    color: #4D533C;
+    text-transform: uppercase;
+}
+
 @mixin text-decription ($color, $p-bottom) {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
     font-size: 16px;
     line-height: 26px;
     color: $color;
     padding-bottom: $p-bottom;
 }
 
+@mixin rating-decription {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 26px;
+    color: rgba(33, 56, 66, 0.6);
+    padding-top: 20px;
+    padding-bottom: 56px;
+}
+
 @mixin text-link ($color) {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
     font-size: 16px;
     line-height: 18px;
     text-decoration-line: underline;
     color: $color;
 }
 
+@mixin rating-link {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    text-decoration-line: underline;
+    color: #D4D6D4;
+}
+
+@mixin yellow-hover {
+    color: #FFD723;
+}
+
+
+
 @mixin company-decription ($font-size, $line-height, $p-top, $p-right, $p-bottom, $p-left) {
+    font-family: Poppins;
     font-style: italic;
+    font-weight: normal;
     font-size: $font-size;
     line-height: $line-height;
     color: #4D533C;
@@ -80,6 +167,9 @@ $container-width: 1110px;
 }
 
 @mixin founder-position ($font-size, $line-height, $color, $p-bottom) {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
     font-size: $font-size;
     line-height: $line-height;
     color: $color;

@@ -1,0 +1,16 @@
+@import '../mixins';
+
+.call-to-action {
+    @include position-bottom-left(-185px, -120px);
+    background-color: #fafafa;
+    @include shadow-block(50px, 130px);
+    @include padding(70px, 260px, 70px, 164px);
+
+    &__title {
+        @include text-title (60px, 74px, #4D533C, 0, 50px);
+    }
+    
+    &__link {
+        @include text-link (#D4D6D4);
+    }
+}
